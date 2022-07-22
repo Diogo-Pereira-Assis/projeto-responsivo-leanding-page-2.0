@@ -1,0 +1,330 @@
+	/*Declarações iniciais para 
+	deixar o site no geito*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+html,body{
+	height: 100%;
+}
+
+@font-face{
+	src: url('../fonts/OpenSans-light.ttf');
+	font-family: Open Sans;
+}
+.clear{
+	clear: both;
+}
+
+	/*Declaração do center
+	para setar todo o nosso site a 1200px*/
+
+.center{
+	width: 100%;
+	max-width: 1200px;
+	margin:0 auto;
+	padding: 0 2%;
+}
+
+	/*E AQUI QUE IRA FICAR NOSSO CABEÇALHO 
+	CONTENDO A LOGO*/
+
+	/*(mim-width aqui foi usado para o responsivo)*/
+
+.header{
+	width: 100%;
+	padding: 5px 0;
+	background-color: #212343;
+}
+
+.header .logo{
+	width: 190px;
+	height: 90px;
+	background-image: url('../imagens/logo2.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+	/*E AQUI QUE IRA FICAR NOSSO BANNER*/
+	/* center herdar a altura 100% para fazer pegar o elemento */
+.container-banner > .center{
+	height: 100%;
+}
+
+	/*(mim-width aqui foi usado para o responsivo)*/
+
+.container-banner{
+
+	width: 100%;
+	height: 557px;
+	background-size: cover;
+	background-position: center;
+	background-image: url('../imagens/header_bg.png');
+
+}
+
+		/*FOI CRIADO A DIV .form PARA CETAR AS DIMENÇÕES */
+		/*( propriedade calc() para fazer crescer alem dos 100%
+		 e o positon relative para voltar -15top
+		  --"feito para o designer ficar legal " )*/
+
+.form {
+ width:400px;
+ height:calc(100% + 30px);
+ position: relative;
+ top: -15px;
+ float: right;
+ background-color: white;
+ border: 8px solid #ccc;
+
+}
+
+.form h2{
+	font-weight: mormal;
+	font-size: 20px;
+	color: #999999;
+	padding: 10px;
+
+}
+.input-container span, p {
+	margin-left: 17px;
+	margin-top: 10px;
+	width: 100%;
+	font-size: 18px;
+	color: #999999;
+	display: inline-block;
+}
+
+form p{
+	margin-top:20px;
+}
+
+	/*Foi criado uma (div .input-container) para
+	organiz~ção de todos os inputs*/
+
+.input-container input[type=text]{
+	margin-top: 10px;
+	margin-left:17px;
+	width: 344px;
+	height: 55px;
+	border: 1px solid #ccc;
+	outline: none;
+
+}
+     /*AQUI ESTA ATACANDO O BOTÃO AINDA DENTRO div.form FORM*/
+
+.container-submit{
+ text-align: center;
+}
+
+.container-submit input[type=submit]{
+	display: inline-block;
+	color: white;
+	font-size: 25px;
+	margin-top: 70px;
+	width: 280px;
+	height: 56px;
+	background-color: #363A6D;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #4A5097;
+	cursor: pointer;
+	outline: none;
+}
+.form input[type=submit]:hover{
+	background-color: #323665;
+}
+
+	/*AQUI ESTA FORA DE ORDEM ESTA DENTRO DA DIV .conteiner-banner
+	Dizendo para CRIA UMA LISTA*/
+
+.container-list{
+	width: 100%;
+	max-width:619px;
+	height:270px;
+	float: left;
+	background-color: rgba(33,35 ,67 , 0.7);
+	display: inline-block;
+	margin-top: 60px;
+	padding: 30px 30px;
+	color: white;
+	clear: both;
+}
+
+.container-list ul li{
+	list-style-position: inside;
+	margin-top: 18px;
+}
+
+	/*para fazer pegar text aling no paragrafo eu tive que aplicar "text-aling'" 
+	na div pai que seria container-2*/
+.container-2{
+	width: 100%;
+	background-color:#DDDDDD ;
+	padding: 40px 2%;
+	text-align: center;
+}
+
+.container-2 h2{
+	font-weight: normal;
+	text-align: center;
+
+}
+
+.container-2 p{
+	display: inline-block;
+	width: 100%;
+	text-align:justify;
+	margin: 15 0px;
+
+}
+	/*AQUI CONTROLANDO O TAMANHO E O POSICIONAMENTO DA SETA */
+
+.arrow{
+	width: 40px;
+	height: 40px;
+	background-image:url('../imagens/arrow.png');
+	background-size: 100% 100%;
+	position: relative;
+	bottom: -60px;
+  	left: 50%;
+  	transform: translateX(-50%);
+
+}
+	/*ultima secção do nosso site*/
+
+.section-1{
+	padding: 90px 0;
+}
+
+.section-1 h2{
+	text-align: center;
+	color: #462366;
+	font-weight: normal;
+}
+
+	/*.container-section está sendo usado para marcar melhor
+	o CSS */
+.container-section{
+	margin-top: 40px;
+	text-align:center;
+}
+	/*.conteiner-single ESTÁ ATACANDO TANTO O
+	 TEXTO QUANTO AS IMAGENS DENTRO*/
+
+.container-single p{
+	padding: 15px 20px;
+	text-align: justify;
+}
+
+.container-single{
+	float: left;
+	width: 33.33%;
+	padding: 30px;
+}
+
+.footer{
+	border-top: 2px solid #888888;
+	padding: 30px 0;
+}
+
+	/*Aqui esta o rodapé
+	 está fora da div .section-1*/
+
+.footer p{
+	text-align: center;
+	color: #888;
+}
+
+	/*OBS não foi chamado text-conteiner-single
+	usado apenas como marcador*/
+
+
+@media screen and (max-width: 1300px ){
+
+.header{
+text-align: center;
+width: 100%;
+height: auto;
+}
+
+.header .logo{
+display: inline-block;
+}
+
+.container-banner{
+	text-align: center;
+	width: 100%;
+	height: auto;
+	padding: 40px 2%;
+
+}
+
+.form {
+max-width: 400px;
+width:60%;
+height: 100%;
+top:0;
+float: right;
+display: inline-block;
+text-align: center;
+
+}
+
+.input-container span, p {
+	margin-left: 0;
+	margin-top: 10px;
+	
+}
+
+.input-container input[type=text]{
+	width: 100%;
+	margin-left: 0;
+
+}
+
+.container-list{
+	width: 40%;
+	max-width:619px;
+	height:auto;
+	float: left;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.container-single{
+	float: none;
+	width: 100%;
+	padding: 30px;
+}
+
+}
+
+@media screen and (max-width: 1100px ){
+
+.form {
+max-width: 400px;
+width:90%;
+height: 100%;
+top:0;
+float: none;
+display: inline-block;
+text-align: center;
+
+}
+
+.container-list{
+	width: 90%;
+	max-width:619px;
+	height:auto;
+	float: none;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+
+}
